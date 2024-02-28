@@ -124,6 +124,8 @@ int main() {
   // empty and unusable in this state.
   std::cout << "Value of b is " << b.GetVal() << std::endl;
 
+  // a.GetVal();
+  
   // Once this function ends, the destructor for both a and b will be called.
   // a's destructor will note that the ptr_ it is managing has been set to 
   // nullptr, and will do nothing, while b's destructor should free the memory

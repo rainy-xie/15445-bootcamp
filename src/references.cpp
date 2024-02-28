@@ -33,6 +33,6 @@ int main() {
   // context will change value.
   add_three(a);
   std::cout << "a is " << a << std::endl;
-
+  std::cout << "now b is " << b << std::endl;
   return 0;
 }

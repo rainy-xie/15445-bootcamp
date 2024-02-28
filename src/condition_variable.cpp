@@ -70,9 +70,11 @@ void waiter_thread() {
 // both increments, along with the conditional acquisition in the waiter
 // thread, worked successfully.
 int main() {
-  std::thread t1(add_count_and_notify);
-  std::thread t2(add_count_and_notify);
   std::thread t3(waiter_thread);
+  std::thread t1(add_count_and_notify);
+  // std::thread t3(waiter_thread);
+  std::thread t2(add_count_and_notify);
+  // std::thread t3(waiter_thread);
   t1.join();
   t2.join();
   t3.join();
